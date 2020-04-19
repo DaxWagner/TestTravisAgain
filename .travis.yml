@@ -9,8 +9,5 @@ addons:
       secure: "k5/NGJGbRSBA7fVrIOirEYRoq5pECDJ1HHhYSO1XG/Hgm8eFp/rJ4muWYX5zypgtrfeb7YeG0WMTcpVz3HpFGPPpUakw3sV6T6Ev7styFr/XQX5LS+xo56s+o9LCSqfT60zzs9vsxlZM7hd/+AK+DVxv3HSx9GQG4IytZ588nHDu5AsaJvy/ikCCtLRoPABZ/IpwidOpPIU4qDCZPYeH2iu2bjyE0fDdbZwXMEMnp91gz42b21bmjEpYqHfIcQdc3GZ+67H14Xz/rNlAG/crTunNHlTmWljguD5MRzj91DZwkRgN+H2BlJj1NJHxPvMzdrya7RoXUPPFm7XGLgvYBouVXp/gl99sjyAaQTpT011sgF7ww79jDZNQUARUa5fySERTsBRikYopw9EpXO3pr1SVbXfD3+AW417IzSnMdAo6zPD6x5/zmC8UOhQ5koNDfLS+yQqURis2wjh1qV3SDr4WwTMFA83Gt43gFsoMBaV1XPYvkRvoZJ6UAYt7cYMgbF14ZqgfCjMYrejpqGBbJfVo8qk9SHfyjoZrIppAu+v9LHM4P3jvPaXxEkdEs2LlOkrl7ydk3/9eAd4VNSPpNRpypJt0OFTmal1PxjMFFuNOW0DWEf1SYueaJiDUxNj1I+LL3B98t4whLmcVCYf/Qedi6y786jUIZDr2q44HmVg=" # encrypted value of your token
 
 script:
-  # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
-  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=DaxWagner_TestTravisAgain
-
-script:
 - ant build
+- sonar-scanner
